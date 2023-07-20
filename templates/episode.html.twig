@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% set episodeTitle = '#' ~ episode.number ~ ' - ' ~ episode.title %}
+
+{% block title episodeTitle %}
+
 {% block body %}
     {{ include('partials/header.html.twig') }}
 
@@ -8,9 +12,7 @@
             <div class="d-flex flex-column align-items-center gap-4 text-light px-5">
                 <div class="d-flex flex-column align-items-center gap-1">
                     <h1 class="text-center">
-                        <a href="{{ episode.link }}" class="text-decoration-none" target="_blank">
-                            #{{ episode.number}} - {{ episode.title }}
-                        </a>
+                        <a href="{{ episode.link }}" class="text-decoration-none" target="_blank">{{ episodeTitle }}</a>
                     </h1>
 
                     <small>Season {{ episode.season }}</small>
