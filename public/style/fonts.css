@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Friends';
+    src: url("../fonts/Friends_font.ttf") format('truetype');
+}
+
+.friends-font {
+    font-family: 'Friends', sans-serif;
+}

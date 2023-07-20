@@ -13,6 +13,10 @@ header {
     height: 56px;
 }
 
+.hover-underline:hover {
+    text-decoration: underline !important;
+}
+
 .fullSize {
     width: 100vw;
     height: 100vh;

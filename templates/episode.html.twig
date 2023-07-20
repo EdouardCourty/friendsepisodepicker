@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% set episodeTitle = '#' ~ episode.number ~ ' - ' ~ episode.title %}
+{% block title '#' ~ episode.number ~ ' - ' ~ episode.title %}
 
-{% block title episodeTitle %}
+{% block description "Don't know what Friends's episode to watch tonight? Let's chose together!" %}
 
 {% block body %}
     {{ include('partials/header.html.twig') }}
@@ -12,7 +12,9 @@
             <div class="d-flex flex-column align-items-center gap-4 text-light px-5">
                 <div class="d-flex flex-column align-items-center gap-1">
                     <h1 class="text-center">
-                        <a href="{{ episode.link }}" class="text-decoration-none" target="_blank">{{ episodeTitle }}</a>
+                        <a href="{{ episode.link }}" class="text-decoration-none text-light hover-underline friends-font" target="_blank">
+                            # {{ episode.number }} <span class="{{ randomTextColor }}">&#x2022;</span> {{ episode.title }}
+                        </a>
                     </h1>
 
                     <small>Season {{ episode.season }}</small>
