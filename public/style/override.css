@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: black;
+}
+
+header {
+    height: 56px;
+}
+
+.fullSize {
+    width: 100vw;
+    height: 100vh;
+}
+
+.z-index-10 {
+    z-index: 10 !important;
+}
+
+.background {
+    z-index: -1 !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: brightness(0.15) blur(20px);
+}
+
+#plot {
+    max-width: 550px
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    #episodeImage {
+        padding: 0 100px
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #episodeImage {
+        width: 600px !important
+    }
+}

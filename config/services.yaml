@@ -12,3 +12,7 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
             - '../src/Tests/'
+
+    App\Service\EpisodePicker:
+        arguments:
+            $rootPath: '%kernel.project_dir%'
