@@ -1,10 +1,9 @@
 monolog:
     handlers:
         main:
-            type: stream
+            type: fingers_crossed
             path: "%kernel.logs_dir%/%kernel.environment%.log"
-            level: debug
-            channels: [ "!event", "!doctrine" ]
+            excluded_http_codes: [ 400, 403, 404 ]
         console:
             type: console
             process_psr_3_messages: false
